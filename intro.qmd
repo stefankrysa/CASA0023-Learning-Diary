@@ -1,0 +1,37 @@
+# Getting started with remote sensing
+
+## Summary
+
+This week, we got started learning about the basics of remote sensing and earth observation. This started with an overview of how sensors collect data. Satellites can detect electromagnetic waves passively or actively, whereby data is either reflected off an object by the sun’s light or a sensor produces its own energy source for illumination, respectively. We learned the fundamentals of EMR, such as identifying wavelength or amplitude, and the range of the electromagnetic spectrum, as depicted in Figure 1. When EMR interacts with a surface, what is reflected is often modified due to energy being absorbed, transmitted through, or scattered. This allows for the detection of spectral signatures, which are unique patterns of reflected or emitted electromagnetic radiation that specific materials exhibit. We also touched on important concepts of spatial, spectral, temporal, and radiometric resolution, which define the characteristics and quality of remotely sensed data.
+
+*EMR SPECTRUM VISUAL*
+
+In the practical, we took a closer look at working with Sentinel-2 and Landsat data in SNAP. We started by loading and merging different bands to play around with how they combined to create composite images. True-colour composites create an image that replicate natural colours familiar to humans, while false-colour composites utilize combinations of non-visible bands, such as near-infrared, along with visible bands, to highlight specific features or phenomena, like vegetation. We moved on to compute the tasselled cap transformation in order identify areas of brightness, greenness and wetness, a method particularly useful for identifying urban land use. Then, to classify different land use areas, we selected and exported pixels covering a variety of land covers. Upon loading this data into R, plotting the difference in pixel values across bands highlighted the unique spectral signatures of various land types.
+
+Given that Sentinel data typically has a lower spatial and temporal resolution compared to Landsat, I am curious about why researchers would continue to opt for using Landsat data. Since Landsat has been in operation for longer than Sentinel, Landsat provides a longer time range of data, which could be useful for certain research questions. Still, I wonder about any other upsides to using data from one satellite over the other.
+
+## Applications
+
+Since getting familiar with Landsat and Sentinel imagery formed a major component of the practical, I was curious to find existing research using these sources. I found Landsat and Sentinel imagery serve as valuable resources for monitoring environmental and land use.
+
+### Sentinel research
+
+Research by Farhadi *et al.* (2025) was one paper that stood out to me. In this work, the authors use Sentinel imagery at a 10m resolution to build a new spectral index for flood mapping. Specifically, the method utilizes visible and NIR bands to discriminate water characteristics. This new technique, they posit, provides a more efficient method for monitoring flood zones without reliance on thresholding methods, whereby different selections can significantly change results. An index accuracy of above 97% for pre-flood, flooded, and post-flood extraction on two test areas are promising results for their proposed method. Successfully developing this method would not have been possible if not for the high spatial resolution of Sentinel imagery.
+
+### Landsat research
+
+Work by Hillson *et al.* (2019), meanwhile, relies on Landsat imagery. In their research, they aim to estimate population density using a regression model with covariates derived from Landsat imagery of Bo, Sierre Leone. Analysis began with 379 Landsat 5 thematic mapper candidate covariates before narrowing down the selection to six for the final model. Covariates encompass a range of data from Landsat, which include pixel values and a variety of transformations of these values. The final model was found to be effective for predicting population density. This was true at even at a 30m spatial resolution. The authors highlight the utility of such a method to estimate local populations in environments where census data is old or unreliable.
+
+### Thoughts
+
+Blah blah - Paper 1 a lot easier to follow - Paper 2 not so intuitive - Remote sensing complicated, even more important to write ab it clearly - As we learned, lower uptake policy... maybe why?
+
+## Reflection
+
+In the context of climate change and rapid urbanization across the globe, earth observation presents fascinating opportunities to better understand and respond to environmental and land use change.
+
+Sentinel imagery, given at a high spatial and temporal resolution, allows researchers to frequently monitor less-accessible areas with great accuracy. This capability can be leveraged both proactively, by assessing risks and guiding the development of preventative infrastructure, and reactively, by coordinating emergency responses following extreme weather events. Such applications are critical for effectively targeting aid and implementing mitigation strategies to enhance resilience against future events. As we have seen, highly effective methods for monitoring flood zones have already been developed.
+
+We also saw the uses of earth observation for urban environments. Monitoring land use and change is valuable to understanding settlement and urban growth patterns and can be employed to make better-informed planning decisions for sustainable growth. Landsat, in operation for over 40 years now, provides a huge range of data for a long period of time. This could be particularly useful in studies analyzing land use change over time.
+
+It was interesting to think about how the tools we employed in the practical this week are applicable in a broader context to monitoring landscapes inside and out of cities. Through techniques such as land classification it is possible to conduct analyses of land use and cover applicable to the issues outlined above. This practical was also a humbling reminder of the value of user-friendly software. By running into a handful of issues using SNAP, I was reminded not to take for granted the flexibility inherent to tools like R.
