@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs 
 
 book:
   title: "CASA0023-Learning-Diary"
@@ -20,6 +21,4 @@ format:
     documentclass: scrreprt
 
 editor: visual
-
-output-dir: docs 
 
