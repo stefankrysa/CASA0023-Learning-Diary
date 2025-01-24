@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CASA0023-Learning-Diary",
+    "section": "",
+    "text": "Welcome",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Getting started with remote sensing",
+    "section": "",
+    "text": "1.1 Summary\nThis week, we got started learning about the basics of remote sensing and earth observation. This started with an overview of how sensors collect data. Satellites can detect electromagnetic waves passively or actively, whereby data is either reflected off an object by the sun’s light or a sensor produces its own energy source for illumination, respectively. We learned the fundamentals of EMR, such as identifying wavelength or amplitude, and the range of the electromagnetic spectrum, as depicted in Figure 1. When EMR interacts with a surface, what is reflected is often modified due to energy being absorbed, transmitted through, or scattered. This allows for the detection of spectral signatures, which are unique patterns of reflected or emitted electromagnetic radiation that specific materials exhibit. We also touched on important concepts of spatial, spectral, temporal, and radiometric resolution, which define the characteristics and quality of remotely sensed data.\nIn the practical, we took a closer look at working with Sentinel-2 and Landsat data in SNAP. We started by loading and merging different bands to play around with how they combined to create composite images. True-colour composites create an image that replicate natural colours familiar to humans, while false-colour composites utilize combinations of non-visible bands, such as near-infrared, along with visible bands, to highlight specific features or phenomena, like vegetation. We moved on to compute the tasselled cap transformation in order identify areas of brightness, greenness and wetness, a method particularly useful for identifying urban land use. Then, to classify different land use areas, we selected and exported pixels covering a variety of land covers. Upon loading this data into R, plotting the difference in pixel values across bands highlighted the unique spectral signatures of various land types.\nGiven that Sentinel data typically has a lower spatial and temporal resolution compared to Landsat, I am curious about why researchers would continue to opt for using Landsat data. Since Landsat has been in operation for longer than Sentinel, Landsat provides a longer time range of data, which could be useful for certain research questions. Still, I wonder about any other upsides to using data from one satellite over the other.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with remote sensing</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#summary",
+    "href": "intro.html#summary",
+    "title": "1  Getting started with remote sensing",
+    "section": "",
+    "text": "Figure 1. Electromagnetic Spectrum. Source: https://upload.wikimedia.org/wikipedia/commons/c/cf/EM_Spectrum_Properties_edit.svg",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with remote sensing</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#applications",
+    "href": "intro.html#applications",
+    "title": "1  Getting started with remote sensing",
+    "section": "1.2 Applications",
+    "text": "1.2 Applications\nSince getting familiar with Landsat and Sentinel imagery formed a major component of the practical, I was curious to find existing research using these sources. I found Landsat and Sentinel imagery serve as valuable resources for monitoring environmental and land use.\n\n1.2.1 Sentinel research\nResearch by Farhadi et al. (2025) was one paper that stood out to me. In this work, the authors use Sentinel imagery at a 10m resolution to build a new spectral index for flood mapping. Specifically, the method utilizes visible and NIR bands to discriminate water characteristics. This new technique, they posit, provides a more efficient method for monitoring flood zones without reliance on thresholding methods, whereby different selections can significantly change results. An index accuracy of above 97% for pre-flood, flooded, and post-flood extraction on two test areas are promising results for their proposed method. Successfully developing this method would not have been possible if not for the high spatial resolution of Sentinel imagery.\n\n\n1.2.2 Landsat research\nWork by Hillson et al. (2019), meanwhile, relies on Landsat imagery. In their research, they aim to estimate population density using a regression model with covariates derived from Landsat imagery of Bo, Sierre Leone. Analysis began with 379 Landsat 5 thematic mapper candidate covariates before narrowing down the selection to six for the final model. Covariates encompass a range of data from Landsat, which include pixel values and a variety of transformations of these values. The final model was found to be effective for predicting population density. This was true at even at a 30m spatial resolution. The authors highlight the utility of such a method to estimate local populations in environments where census data is old or unreliable.\n\n\n1.2.3 Thoughts\nWhile both works provided an interesting showcase of the practical applications of earth observation in different settings, as someone new to this field it was interesting for me to see how the researchers communicated their findings differently. I found the analysis done by Farhadi et al. (2025) to be far simpler to follow than that of Hillson et al. (2019). To me, the former did a better job of outlining their methods in an easy-to-understand way. Perhaps more complex papers will make more sense later in this course, but I also think this points to an important issue in remote sensing research: how to make the work accessible and easy to understand for the general public. As this field gains traction and recognition among policy-makers, it is increasingly important to communicate research in a way that is accessible to all, not just academics.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with remote sensing</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#reflection",
+    "href": "intro.html#reflection",
+    "title": "1  Getting started with remote sensing",
+    "section": "1.3 Reflection",
+    "text": "1.3 Reflection\nIn the context of climate change and rapid urbanization across the globe, earth observation presents fascinating opportunities to better understand and respond to environmental and land use change.\nSentinel imagery, given at a high spatial and temporal resolution, allows researchers to frequently monitor less-accessible areas with great accuracy. This capability can be leveraged both proactively, by assessing risks and guiding the development of preventative infrastructure, and reactively, by coordinating emergency responses following extreme weather events. Such applications are critical for effectively targeting aid and implementing mitigation strategies to enhance resilience against future events. As we have seen, highly effective methods for monitoring flood zones have already been developed.\nWe also saw the uses of earth observation for urban environments. Monitoring land use and change is valuable to understanding settlement and urban growth patterns and can be employed to make better-informed planning decisions for sustainable growth. Landsat, in operation for over 40 years now, provides a huge range of data for a long period of time. This could be particularly useful in studies analyzing land use change over time.\nIt was interesting to think about how the tools we employed in the practical this week are applicable in a broader context to monitoring landscapes inside and out of cities. Through techniques such as land classification it is possible to conduct analyses of land use and cover applicable to the issues outlined above. This practical was also a humbling reminder of the value of user-friendly software. By running into a handful of issues using SNAP, I was reminded not to take for granted the flexibility inherent to tools like R.\n\n\n\n\nFarhadi, Hadi, Hamid Ebadi, Abbas Kiani, and Ali Asgary. 2025. “Introducing a New Index for Flood Mapping Using Sentinel-2 Imagery (SFMI).” Computers & Geosciences 194 (January): 105742. https://doi.org/10.1016/j.cageo.2024.105742.\n\n\nHillson, Roger, Austin Coates, Joel D. Alejandre, Kathryn H. Jacobsen, Rashid Ansumana, Alfred S. Bockarie, Umaru Bangura, Joseph M. Lamin, and David A. Stenger. 2019. “Estimating the Size of Urban Populations Using Landsat Images: A Case Study of Bo, Sierra Leone, West Africa.” International Journal of Health Geographics 18 (1): 16. https://doi.org/10.1186/s12942-019-0180-1.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with remote sensing</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Presentation",
+    "section": "",
+    "text": "xaringanExtra::embed_xaringan(url = \"URL of your presentation\", ratio = \"16:9\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Farhadi, Hadi, Hamid Ebadi, Abbas Kiani, and Ali Asgary. 2025.\n“Introducing a New Index for Flood Mapping Using Sentinel-2\nImagery (SFMI).” Computers & Geosciences 194\n(January): 105742. https://doi.org/10.1016/j.cageo.2024.105742.\n\n\nHillson, Roger, Austin Coates, Joel D. Alejandre, Kathryn H. Jacobsen,\nRashid Ansumana, Alfred S. Bockarie, Umaru Bangura, Joseph M. Lamin, and\nDavid A. Stenger. 2019. “Estimating the Size of Urban Populations\nUsing Landsat Images: A Case Study of Bo, Sierra Leone, West\nAfrica.” International Journal of Health Geographics 18\n(1): 16. https://doi.org/10.1186/s12942-019-0180-1.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
