@@ -1,9 +1,9 @@
 project:
   type: book
-  output-dir: docs 
+  output-dir: docs
 
 book:
-  title: "CASA0023-Learning-Diary"
+  title: "CASA0023 Learning Diary"
   author: "Stefan Krysa"
   date: "1/21/2025"
   chapters:
@@ -21,4 +21,3 @@ format:
     documentclass: scrreprt
 
 editor: visual
-
