@@ -1,5 +1,5 @@
 # Presentation
 
 ```{r} results='asis', echo=FALSE}
-  xaringanExtra::embed_xaringan(url = "https://stefankrysa.github.io/CASA0023-Xaringan-Presentation/", ratio = "16:9")
+xaringanExtra::embed_xaringan(url = "https://stefankrysa.github.io/CASA0023-Xaringan-Presentation/", ratio = "16:9")
 ```

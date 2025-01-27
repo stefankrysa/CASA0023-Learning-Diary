@@ -54,7 +54,7 @@
     "href": "summary.html",
     "title": "2  Presentation",
     "section": "",
-    "text": "xaringanExtra::embed_xaringan(url = \"URL of your presentation\", ratio = \"16:9\")",
+    "text": "xqx results='asis', echo=FALSE} xaringanExtra::embed_xaringan(url = \"https://stefankrysa.github.io/CASA0023-Xaringan-Presentation/\", ratio = \"16:9\")",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Presentation</span>"
     ]
