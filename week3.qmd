@@ -16,7 +16,7 @@ Finally, radiometric correction refers to adjusting the raw data to account for 
 
 We explored data joining and image enhancement in this week’s practical. I found it interesting to apply the NDVI ratio to NYC. In visualizing this data, it was clear how certain areas of the city have disproportionately more vegetation than others (Figure 1).
 
-![Figure 1. Practical Output of NYC NDVI \> 20%](images/nyc.png)
+![Figure 1. Practical Output of NYC NDVI \> 20%.](images/nyc.png)
 
 Learning more about Earth observation data correction gave me a new appreciation for Analysis Ready Data. This pre-processing significantly reduces the workload, allowing researchers to focus more on data interpretation and analysis rather than spending extensive time on initial corrections. Still, if I were given ARD, I think it would still be important to consider which correction methods were used and how this might impact the product I’ve received.
 
