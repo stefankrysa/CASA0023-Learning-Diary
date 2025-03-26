@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Getting started with remote sensing – CASA0023 Learning Diary</title>
+<title>3&nbsp; Corrections – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./week4.html" rel="next">
+<link href="./summary.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,7 +134,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></span></a>
   </div>
 </li>
@@ -146,7 +146,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link">
+  <a href="./week3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></span></a>
   </div>
 </li>
@@ -184,14 +184,14 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">1.2</span> Applications</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">3.2</span> Applications</a>
   <ul class="collapse">
-  <li><a href="#sentinel-research" id="toc-sentinel-research" class="nav-link" data-scroll-target="#sentinel-research"><span class="header-section-number">1.2.1</span> Sentinel research</a></li>
-  <li><a href="#landsat-research" id="toc-landsat-research" class="nav-link" data-scroll-target="#landsat-research"><span class="header-section-number">1.2.2</span> Landsat research</a></li>
-  <li><a href="#thoughts" id="toc-thoughts" class="nav-link" data-scroll-target="#thoughts"><span class="header-section-number">1.2.3</span> Thoughts</a></li>
+  <li><a href="#geometric-correction" id="toc-geometric-correction" class="nav-link" data-scroll-target="#geometric-correction"><span class="header-section-number">3.2.1</span> Geometric correction</a></li>
+  <li><a href="#atmospheric-correction" id="toc-atmospheric-correction" class="nav-link" data-scroll-target="#atmospheric-correction"><span class="header-section-number">3.2.2</span> Atmospheric correction</a></li>
+  <li><a href="#thoughts" id="toc-thoughts" class="nav-link" data-scroll-target="#thoughts"><span class="header-section-number">3.2.3</span> Thoughts</a></li>
   </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -200,7 +200,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></h1>
 </div>
 
 
@@ -217,48 +217,58 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
-<p>This week, we got started learning about the basics of remote sensing and earth observation. This started with an overview of how sensors collect data. Satellites can detect electromagnetic waves passively or actively, whereby data is either reflected off an object by the sun’s light or a sensor produces its own energy source for illumination, respectively. We learned the fundamentals of EMR, such as identifying wavelength or amplitude, and the range of the electromagnetic spectrum, as depicted in Figure 1. When EMR interacts with a surface, what is reflected is often modified due to energy being absorbed, transmitted through, or scattered. This allows for the detection of spectral signatures, which are unique patterns of reflected or emitted electromagnetic radiation that specific materials exhibit. We also touched on important concepts of spatial, spectral, temporal, and radiometric resolution, which define the characteristics and quality of remotely sensed data.</p>
+<section id="summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<p>This week, we took a closer look at data correction, joining, and enhancement. These days, a lot of remote sensing data comes nicely packaged as ARD (Analysis Ready Data). As the name suggests, this means the data has been pre-processed, and the necessary corrections completed. Still, it is important to understand the underlying processes.</p>
+<p>Data correction for remote sensing can be broken up into geometric, atmospheric, topographic, and radiometric corrections.</p>
+<p>Geometric correction refers to the process of aligning points in the image to a reference dataset. An interesting consideration is forward vs.&nbsp;backward mapping, where forward mapping projects input pixels to output coordinates, while backward mapping identifies the corresponding source pixel for each output pixel.</p>
+<p>When satellites collect data, interference from the atmosphere can distort the imagery. Depending on what features of the image we’re interested in, atmospheric correction may be necessary. Although Jensen suggests that atmospheric correction is only needed in certain circumstances, we were told it’s best practice to apply it consistently. We learned about methods like Dark Object Subtraction (DOS) and Pseudo-Invariant Features (PIFs).</p>
+<p>Topographic correction removes distortion caused by variations in terrain. This is especially important when imaging areas with significant elevation changes, as the angle of the satellite (nadir vs.&nbsp;off-nadir) can create shadows and illumination differences.</p>
+<p>Finally, radiometric correction refers to adjusting the raw data to account for sensor noise and inconsistencies. Raw Earth observation data often comes in the form of Digital Numbers (DN), representing pixel intensity. To make the data meaningful, it needs to be converted to spectral radiance through radiometric calibration.</p>
+<p>We explored data joining and image enhancement in this week’s practical. I found it interesting to apply the NDVI ratio to NYC. In visualizing this data, it was clear how certain areas of the city have disproportionately more vegetation than others (Figure 1).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/EM_Spectrum_Properties_edit.svg" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Electromagnetic Spectrum. Source: https://upload.wikimedia.org/wikipedia/commons/c/cf/EM_Spectrum_Properties_edit.svg</figcaption>
+<p><img src="images/nyc.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Practical Output of NYC NDVI &gt; 20%.</figcaption>
 </figure>
 </div>
-<p>In the practical, we took a closer look at working with Sentinel-2 and Landsat data in SNAP. We started by loading and merging different bands to play around with how they combined to create composite images. True-colour composites create an image that replicate natural colours familiar to humans, while false-colour composites utilize combinations of non-visible bands, such as near-infrared, along with visible bands, to highlight specific features or phenomena, like vegetation. We moved on to compute the tasselled cap transformation in order identify areas of brightness, greenness and wetness, a method particularly useful for identifying urban land use. Then, to classify different land use areas, we selected and exported pixels covering a variety of land covers. Upon loading this data into R, plotting the difference in pixel values across bands highlighted the unique spectral signatures of various land types.</p>
-<p>Given that Sentinel data typically has a lower spatial and temporal resolution compared to Landsat, I am curious about why researchers would continue to opt for using Landsat data. Since Landsat has been in operation for longer than Sentinel, Landsat provides a longer time range of data, which could be useful for certain research questions. Still, I wonder about any other upsides to using data from one satellite over the other.</p>
+<p>Learning more about Earth observation data correction gave me a new appreciation for Analysis Ready Data. This pre-processing significantly reduces the workload, allowing researchers to focus more on data interpretation and analysis rather than spending extensive time on initial corrections. Still, if I were given ARD, I think it would still be important to consider which correction methods were used and how this might impact the product I’ve received.</p>
 </section>
-<section id="applications" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
-<p>Since getting familiar with Landsat and Sentinel imagery formed a major component of the practical, I was curious to find existing research using these sources. I found Landsat and Sentinel imagery serve as valuable resources for monitoring environmental and land use.</p>
-<section id="sentinel-research" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="sentinel-research"><span class="header-section-number">1.2.1</span> Sentinel research</h3>
-<p>Research by Farhadi <em>et al.</em> <span class="citation" data-cites="farhadi2025">(<a href="references.html#ref-farhadi2025" role="doc-biblioref">2025</a>)</span> was one paper that stood out to me. In this work, the authors use Sentinel imagery at a 10m resolution to build a new spectral index for flood mapping. Specifically, the method utilizes visible and NIR bands to discriminate water characteristics. This new technique, they posit, provides a more efficient method for monitoring flood zones without reliance on thresholding methods, whereby different selections can significantly change results. An index accuracy of above 97% for pre-flood, flooded, and post-flood extraction on two test areas are promising results for their proposed method. Successfully developing this method would not have been possible if not for the high spatial resolution of Sentinel imagery.</p>
+<section id="applications" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
+<p>After learning some of the different methods for correcting remote sensing data, I was curious about research on comparing methods and if there was any work on establishing the contexts in which certain corrections might be more suitable than others.</p>
+<section id="geometric-correction" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.2.1</span> Geometric correction</h3>
+<p>One paper I found interest is a study by Bannari <em>et al.</em> <span class="citation" data-cites="bannariTheoreticalReviewDifferent1995">(<a href="references.html#ref-bannariTheoreticalReviewDifferent1995" role="doc-biblioref">1995</a>)</span>. In their work, they review mathematical models of geometric corrections for remote sensing images. They outline a number of different error sources that create distortions of images and explore three mathematical models used to conduct geometric correction: equations of collinearity, equations of collinearity related to celestial mechanics and polynomial equations. They find that using an equation of collinearity related to celestial mechanics is the best for mapping that requires high precision. The polynomial method was also found to produce good results under certain conditions.</p>
 </section>
-<section id="landsat-research" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="landsat-research"><span class="header-section-number">1.2.2</span> Landsat research</h3>
-<p>Work by Hillson <em>et al.</em> <span class="citation" data-cites="hillson2019">(<a href="references.html#ref-hillson2019" role="doc-biblioref">2019</a>)</span>, meanwhile, relies on Landsat imagery. In their research, they aim to estimate population density using a regression model with covariates derived from Landsat imagery of Bo, Sierre Leone. Analysis began with 379 Landsat 5 thematic mapper candidate covariates before narrowing down the selection to six for the final model. Covariates encompass a range of data from Landsat, which include pixel values and a variety of transformations of these values. The final model was found to be effective for predicting population density. This was true at even at a 30m spatial resolution. The authors highlight the utility of such a method to estimate local populations in environments where census data is old or unreliable.</p>
+<section id="atmospheric-correction" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.2.2</span> Atmospheric correction</h3>
+<p>Work by Hadjimitsis <em>et al.</em> <span class="citation" data-cites="hadjimitsisAssessmentEffectivenessAtmospheric2004">(<a href="references.html#ref-hadjimitsisAssessmentEffectivenessAtmospheric2004" role="doc-biblioref">2004</a>)</span>, meanwhile, focuses on the effectiveness of atmospheric correction algorithms. The authors highlight the high number of atmospheric correction algorithms out there while pointing out a gap in research identifying the benefits of different approaches. The authors compare methods by applying them to a series of Landsat-5 images of 10 reservoirs in the Lower Thames valley. They found that the dark object subtraction (DOS) method worked the best most consistently. The method using pseudo-invariant points was less effective, which they attribute to the lack of a solid base image for normalizing the others.</p>
 </section>
-<section id="thoughts" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="thoughts"><span class="header-section-number">1.2.3</span> Thoughts</h3>
-<p>While both works provided an interesting showcase of the practical applications of earth observation in different settings, as someone new to this field it was interesting for me to see how the researchers communicated their findings differently. I found the analysis done by Farhadi <em>et al.</em> <span class="citation" data-cites="farhadi2025">(<a href="references.html#ref-farhadi2025" role="doc-biblioref">2025</a>)</span> to be far simpler to follow than that of Hillson <em>et al.</em> <span class="citation" data-cites="hillson2019">(<a href="references.html#ref-hillson2019" role="doc-biblioref">2019</a>)</span>. To me, the former did a better job of outlining their methods in an easy-to-understand way. Perhaps more complex papers will make more sense later in this course, but I also think this points to an important issue in remote sensing research: how to make the work accessible and easy to understand for the general public. As this field gains traction and recognition among policy-makers, it is increasingly important to communicate research in a way that is accessible to all, not just academics.</p>
+<section id="thoughts" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="thoughts"><span class="header-section-number">3.2.3</span> Thoughts</h3>
+<p>While I recognize that these studies are relatively old, it was interesting nonetheless to consider how methods for correcting Earth observation data have developed and the way researchers have debated various approaches. The papers underscore that no single method is always the best, and the importance of considering the specific context and data being analyzed. While pre-processed data may be convenient, this research reminded me the importance of remaining critical of all data that I’m given and ensuring that I understand the corrections that have been applied.</p>
 </section>
 </section>
-<section id="reflection" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
-<p>In the context of climate change and rapid urbanization across the globe, earth observation presents fascinating opportunities to better understand and respond to environmental and land use change.</p>
-<p>Sentinel imagery, given at a high spatial and temporal resolution, allows researchers to frequently monitor less-accessible areas with great accuracy. This capability can be leveraged both proactively, by assessing risks and guiding the development of preventative infrastructure, and reactively, by coordinating emergency responses following extreme weather events. Such applications are critical for effectively targeting aid and implementing mitigation strategies to enhance resilience against future events. As we have seen, highly effective methods for monitoring flood zones have already been developed.</p>
-<p>We also saw the uses of earth observation for urban environments. Monitoring land use and change is valuable to understanding settlement and urban growth patterns and can be employed to make better-informed planning decisions for sustainable growth. Landsat, in operation for over 40 years now, provides a huge range of data for a long period of time. This could be particularly useful in studies analyzing land use change over time.</p>
-<p>It was interesting to think about how the tools we employed in the practical this week are applicable in a broader context to monitoring landscapes inside and out of cities. Through techniques such as land classification it is possible to conduct analyses of land use and cover applicable to the issues outlined above. This practical was also a humbling reminder of the value of user-friendly software. By running into a handful of issues using SNAP, I was reminded not to take for granted the flexibility inherent to tools like R.</p>
+<section id="reflection" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
+<p>Considering the variety of methods available for data correction, I was surprised by the number of different approaches and how these could yield different results. Honestly, I expected correction to be far more straightforward, with less room for error. This week impressed on me the importance of understanding the nuances inherent to different methods for identifying potential biases in data. It’s almost overwhelming to determine the most appropriate technique for a given research question, especially when multiple valid options exist. That being said, flexibility in correction methods can also be useful depending on the data available and specific research question. For example, for atmospheric correction, dark object subtraction (DOS) could be more suitable than psuedo-invariant features (PIFs) in an image without a clear reliable reference point.</p>
+<p>Exploring image enhancement approaches in the practical further highlighted the range of tools available for research. I enjoyed seeing these tools in action for a practical application. When applying the NDVI ratio to New York City, I was struck by how relatively simple a method this was to identify areas of greenspace in the city. It made me think about the range policy applications, such as examining access to greenspace in different neighbourhoods or targeting areas for increased urban greening.</p>
+<p>Overall, this week I gained a deeper appreciation for the foundational work done by researchers in this field. In particular, learning about Virginia Norwood’s contributions was eye-opening. Mainly, I was surprised I had never heard of her before. Given that many women in science often go unrecognized and under-celebrated, I’m glad I had the chance to learn more about her life and achievements (Figure 2). I had also somehow always assumed that remote sensing was far newer a field, so it was unexpected to learn how technology that was developed back in the 1970s is still so relevant today. Moving forward, I will be curious to see how this background knowledge will inform the way I interpret remote sensing work and research.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://landsat.gsfc.nasa.gov/wp-content/uploads/2022/03/Virginia_PowellAward.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. Go Norwood! Source: NASA</figcaption>
+</figure>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-farhadi2025" class="csl-entry" role="listitem">
-Farhadi, Hadi, Hamid Ebadi, Abbas Kiani, and Ali Asgary. 2025. <span>“Introducing a New Index for Flood Mapping Using Sentinel-2 Imagery (SFMI).”</span> <em>Computers &amp; Geosciences</em> 194 (January): 105742. <a href="https://doi.org/10.1016/j.cageo.2024.105742">https://doi.org/10.1016/j.cageo.2024.105742</a>.
+<div id="ref-bannariTheoreticalReviewDifferent1995" class="csl-entry" role="listitem">
+Bannari, A., D. Morin, G. B. Bénié, and F. J. Bonn. 1995. <span>“A Theoretical Review of Different Mathematical Models of Geometric Corrections Applied to Remote Sensing Images.”</span> <em>Remote Sensing Reviews</em> 13 (1–2): 27–47. <a href="https://doi.org/10.1080/02757259509532295">https://doi.org/10.1080/02757259509532295</a>.
 </div>
-<div id="ref-hillson2019" class="csl-entry" role="listitem">
-Hillson, Roger, Austin Coates, Joel D. Alejandre, Kathryn H. Jacobsen, Rashid Ansumana, Alfred S. Bockarie, Umaru Bangura, Joseph M. Lamin, and David A. Stenger. 2019. <span>“Estimating the Size of Urban Populations Using Landsat Images: A Case Study of Bo, Sierra Leone, West Africa.”</span> <em>International Journal of Health Geographics</em> 18 (1): 16. <a href="https://doi.org/10.1186/s12942-019-0180-1">https://doi.org/10.1186/s12942-019-0180-1</a>.
+<div id="ref-hadjimitsisAssessmentEffectivenessAtmospheric2004" class="csl-entry" role="listitem">
+Hadjimitsis, D. G., C. R. I. Clayton, and V. S. Hope. 2004. <span>“An Assessment of the Effectiveness of Atmospheric Correction Algorithms Through the Remote Sensing of Some Reservoirs.”</span> <em>International Journal of Remote Sensing</em> 25 (18): 3651–74. <a href="https://doi.org/10.1080/01431160310001647993">https://doi.org/10.1080/01431160310001647993</a>.
 </div>
 </div>
 </section>
@@ -686,13 +696,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      <a href="./summary.html" class="pagination-link" aria-label="Presentation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Presentation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Presentation">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Presentation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week4.html" class="pagination-link" aria-label="Policy">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

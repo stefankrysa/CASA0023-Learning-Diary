@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Getting started with remote sensing – CASA0023 Learning Diary</title>
+<title>6&nbsp; Classification I – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./week5.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,7 +134,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></span></a>
   </div>
 </li>
@@ -164,7 +164,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link">
+  <a href="./week6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
   </div>
 </li>
@@ -184,14 +184,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">1.2</span> Applications</a>
-  <ul class="collapse">
-  <li><a href="#sentinel-research" id="toc-sentinel-research" class="nav-link" data-scroll-target="#sentinel-research"><span class="header-section-number">1.2.1</span> Sentinel research</a></li>
-  <li><a href="#landsat-research" id="toc-landsat-research" class="nav-link" data-scroll-target="#landsat-research"><span class="header-section-number">1.2.2</span> Landsat research</a></li>
-  <li><a href="#thoughts" id="toc-thoughts" class="nav-link" data-scroll-target="#thoughts"><span class="header-section-number">1.2.3</span> Thoughts</a></li>
-  </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">6.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -200,7 +195,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
 </div>
 
 
@@ -217,48 +212,47 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
-<p>This week, we got started learning about the basics of remote sensing and earth observation. This started with an overview of how sensors collect data. Satellites can detect electromagnetic waves passively or actively, whereby data is either reflected off an object by the sun’s light or a sensor produces its own energy source for illumination, respectively. We learned the fundamentals of EMR, such as identifying wavelength or amplitude, and the range of the electromagnetic spectrum, as depicted in Figure 1. When EMR interacts with a surface, what is reflected is often modified due to energy being absorbed, transmitted through, or scattered. This allows for the detection of spectral signatures, which are unique patterns of reflected or emitted electromagnetic radiation that specific materials exhibit. We also touched on important concepts of spatial, spectral, temporal, and radiometric resolution, which define the characteristics and quality of remotely sensed data.</p>
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<p>After going through Google Earth Engine basics last week, we were ready to delve deeper into classification methods using GEE. The lecture provided an overview of methodologies and applications. We started by looking at how classification builds on expert systems (Figure 1), which we learned are systems that use human knowledge to solve problems.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/EM_Spectrum_Properties_edit.svg" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Electromagnetic Spectrum. Source: https://upload.wikimedia.org/wikipedia/commons/c/cf/EM_Spectrum_Properties_edit.svg</figcaption>
+<p><img src="https://qph.cf2.quoracdn.net/main-qimg-a63e873b68b7d220020991140f0a896c-lq.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Expert Systems. Source: Aftab Alam</figcaption>
 </figure>
 </div>
-<p>In the practical, we took a closer look at working with Sentinel-2 and Landsat data in SNAP. We started by loading and merging different bands to play around with how they combined to create composite images. True-colour composites create an image that replicate natural colours familiar to humans, while false-colour composites utilize combinations of non-visible bands, such as near-infrared, along with visible bands, to highlight specific features or phenomena, like vegetation. We moved on to compute the tasselled cap transformation in order identify areas of brightness, greenness and wetness, a method particularly useful for identifying urban land use. Then, to classify different land use areas, we selected and exported pixels covering a variety of land covers. Upon loading this data into R, plotting the difference in pixel values across bands highlighted the unique spectral signatures of various land types.</p>
-<p>Given that Sentinel data typically has a lower spatial and temporal resolution compared to Landsat, I am curious about why researchers would continue to opt for using Landsat data. Since Landsat has been in operation for longer than Sentinel, Landsat provides a longer time range of data, which could be useful for certain research questions. Still, I wonder about any other upsides to using data from one satellite over the other.</p>
+<p>Machine learning (ML), as a computational modeling of the learning process, mimics inductive learning, whereby humans generalize from examples to reach logical conclusions. For computers to achieve this, ML searches through data to explain patterns and make predictions. I was surprised to learn I’d already worked with ML before with regression analysis. We then spent time focusing on a few specific supervised classification methods, including classification and regression trees (CART), random forests, and support vector machines.</p>
+<p>Classification trees categorize data into discrete classes using classic “yes/no” decision tree models. In contrast, regression trees predict continuous values, making them useful when linear regression is insufficient. These models divide data into segments, placing breaks where the sum of squared residuals (SSR) is minimized. The root variable is chosen to reduce Gini impurity, and methods like setting a minimum observation threshold (e.g., 20 pixels in Earth observation) or weakest-link pruning help prevent overfitting.</p>
+<p>Random forests extend CART by combining multiple decision trees, where the most common outcome (“votes”) across trees determines the final classification. I applied this method in the practical exercise, using it to classify land cover in Boston (Figure 2)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/boston.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. Random Forest Classification Output for LULC in Boston, MA, distinguishing high-density urban areas (dark pink), low-density urban areas (pink), forests (dark green), grass (light green) and water (purple).</figcaption>
+</figure>
+</div>
+<p>Lastly, we covered SVMs, which function similarly to logistic regression but incorporate additional parameters for flexibility. Adjusting factors like the kernel type, C (which influences decision boundary maximization), and gamma (which controls the influence of training examples) alters the classification. While these methods provide high accuracy, they also present challenges. SVMs and random forests essentially function as “black box” models, making their decision processes less interpretable than some other classification methods, like decision trees. This issue resonated with me. While decision trees provide step-by-step walkthroughs, the logic behind an SVM or random forest is less clear. This can cause issues with transparency, making it difficult explain to why classifications are presented as such. That said, through the practical I was impressed by how such complex methods can be executed in relatively little code.</p>
 </section>
-<section id="applications" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
-<p>Since getting familiar with Landsat and Sentinel imagery formed a major component of the practical, I was curious to find existing research using these sources. I found Landsat and Sentinel imagery serve as valuable resources for monitoring environmental and land use.</p>
-<section id="sentinel-research" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="sentinel-research"><span class="header-section-number">1.2.1</span> Sentinel research</h3>
-<p>Research by Farhadi <em>et al.</em> <span class="citation" data-cites="farhadi2025">(<a href="references.html#ref-farhadi2025" role="doc-biblioref">2025</a>)</span> was one paper that stood out to me. In this work, the authors use Sentinel imagery at a 10m resolution to build a new spectral index for flood mapping. Specifically, the method utilizes visible and NIR bands to discriminate water characteristics. This new technique, they posit, provides a more efficient method for monitoring flood zones without reliance on thresholding methods, whereby different selections can significantly change results. An index accuracy of above 97% for pre-flood, flooded, and post-flood extraction on two test areas are promising results for their proposed method. Successfully developing this method would not have been possible if not for the high spatial resolution of Sentinel imagery.</p>
+<section id="application" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
+<p>Following this week’s lecture, I was curious to explore previous work using these classification methods. I decided to focus particularly on random forests and support vector machines.</p>
+<p>In a study by Svoboda <em>et al.</em> [@-svobodaRandomForestClassification2022], the authors utilize random forests in Google Earth Engine to classify land in Czechia for the LULUCF (Land Use, Land-Use Change, and Forestry) greenhouse gas inventory. While Czechia traditionally uses cadastral data for this task in the past, the study highlighted the potential for Earth observation data to be applied in this context. I noticed the authors use the median method for mosaicking, aligning with good practices we discussed in class. Overall, the model achieved the highest accuracy for cropland and woodland but was slightly less effective for settlements <span class="citation" data-cites="svobodaRandomForestClassification2022">(<a href="references.html#ref-svobodaRandomForestClassification2022" role="doc-biblioref">Svoboda et al. 2022</a>)</span>. The authors highlight the potential of cloud-based classification with EO data to enhance LULUCF applications globally and emphasize the need for stronger collaboration between end-users and EO experts to maximize its impact <span class="citation" data-cites="svobodaRandomForestClassification2022">(<a href="references.html#ref-svobodaRandomForestClassification2022" role="doc-biblioref">Svoboda et al. 2022</a>)</span>.</p>
+<p>Support vector machines have also been adopted for remote sensing tasks. Yan and Huang [@-yanDetectingSeaIce2019], for example, apply SVMs to detect sea ice, arguing that they provide better accuracy than maximum likelihood classification. A key advantage highlighted was the model’s robustness with limited training data. The study was particularly interesting because it addressed a gap in the application of SVMs to sea ice detection. Furthermore, the authors utilize Delay Doppler Mapping data from satellite TDS-1, a form of remote sensing data I hadn’t encountered before. They concluded that SVMs outperformed neural network (NN) and convolutional neural network (CNN) algorithms <span class="citation" data-cites="yanDetectingSeaIce2019">(<a href="references.html#ref-yanDetectingSeaIce2019" role="doc-biblioref">Yan and Huang 2019</a>)</span>. While their analysis was not conducted in GEE, it still provided valuable insights into applying classification methods and working with new datasets.</p>
+<p>These readings increased my appreciation for striking a balance between model complexity and interpretability. The more I explore EO applications, the more critically I can assess them. I found Svoboda <em>et al.</em> <span class="citation" data-cites="svobodaRandomForestClassification2022">(<a href="references.html#ref-svobodaRandomForestClassification2022" role="doc-biblioref">Svoboda et al. 2022</a>)</span> particularly effective in clearly outlining their policy objectives, tools, and methods, making the study easy to follow. In contrast, the second paper was less straightforward in connecting its findings to broader applications. I believe the most valuable research not only presents methodological advancements but also links them to actionable outcomes, ensuring their relevance beyond academic contexts.</p>
 </section>
-<section id="landsat-research" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="landsat-research"><span class="header-section-number">1.2.2</span> Landsat research</h3>
-<p>Work by Hillson <em>et al.</em> <span class="citation" data-cites="hillson2019">(<a href="references.html#ref-hillson2019" role="doc-biblioref">2019</a>)</span>, meanwhile, relies on Landsat imagery. In their research, they aim to estimate population density using a regression model with covariates derived from Landsat imagery of Bo, Sierre Leone. Analysis began with 379 Landsat 5 thematic mapper candidate covariates before narrowing down the selection to six for the final model. Covariates encompass a range of data from Landsat, which include pixel values and a variety of transformations of these values. The final model was found to be effective for predicting population density. This was true at even at a 30m spatial resolution. The authors highlight the utility of such a method to estimate local populations in environments where census data is old or unreliable.</p>
-</section>
-<section id="thoughts" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="thoughts"><span class="header-section-number">1.2.3</span> Thoughts</h3>
-<p>While both works provided an interesting showcase of the practical applications of earth observation in different settings, as someone new to this field it was interesting for me to see how the researchers communicated their findings differently. I found the analysis done by Farhadi <em>et al.</em> <span class="citation" data-cites="farhadi2025">(<a href="references.html#ref-farhadi2025" role="doc-biblioref">2025</a>)</span> to be far simpler to follow than that of Hillson <em>et al.</em> <span class="citation" data-cites="hillson2019">(<a href="references.html#ref-hillson2019" role="doc-biblioref">2019</a>)</span>. To me, the former did a better job of outlining their methods in an easy-to-understand way. Perhaps more complex papers will make more sense later in this course, but I also think this points to an important issue in remote sensing research: how to make the work accessible and easy to understand for the general public. As this field gains traction and recognition among policy-makers, it is increasingly important to communicate research in a way that is accessible to all, not just academics.</p>
-</section>
-</section>
-<section id="reflection" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
-<p>In the context of climate change and rapid urbanization across the globe, earth observation presents fascinating opportunities to better understand and respond to environmental and land use change.</p>
-<p>Sentinel imagery, given at a high spatial and temporal resolution, allows researchers to frequently monitor less-accessible areas with great accuracy. This capability can be leveraged both proactively, by assessing risks and guiding the development of preventative infrastructure, and reactively, by coordinating emergency responses following extreme weather events. Such applications are critical for effectively targeting aid and implementing mitigation strategies to enhance resilience against future events. As we have seen, highly effective methods for monitoring flood zones have already been developed.</p>
-<p>We also saw the uses of earth observation for urban environments. Monitoring land use and change is valuable to understanding settlement and urban growth patterns and can be employed to make better-informed planning decisions for sustainable growth. Landsat, in operation for over 40 years now, provides a huge range of data for a long period of time. This could be particularly useful in studies analyzing land use change over time.</p>
-<p>It was interesting to think about how the tools we employed in the practical this week are applicable in a broader context to monitoring landscapes inside and out of cities. Through techniques such as land classification it is possible to conduct analyses of land use and cover applicable to the issues outlined above. This practical was also a humbling reminder of the value of user-friendly software. By running into a handful of issues using SNAP, I was reminded not to take for granted the flexibility inherent to tools like R.</p>
+<section id="reflection" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
+<p>During the lecture this week, we skipped over the maximum likelihood portion of the presentation. It was mentioned that, these days, machine learning is more relevant. This made me wonder, are there still contexts where maximum likelihood remains useful? While ML approaches dominate, it’s important to remember that no model is universally superior.</p>
+<p>While I read the papers above, I was reminded that even sophisticated ML models are not infallible. For instance, the Czechia study showed lower accuracy for urban areas, demonstrating that advanced methods still struggle with certain classifications. As ML continues to shape classification tasks, researchers and practitioners must remain aware of its limitations, ensuring results are taken with caution rather than assumed to be inherently superior. This also links back to interpretability. While methods like random forests and SVMs may offer higher accuracy, their complexity can make them difficult to interpret. This trade-off between performance and transparency is crucial, particularly in contexts where decisions in analysis must be explainable to stakeholders.</p>
+<p>With artificial intelligence now a major topic of discussion across many fields, this week’s content also led me to wonder how advanced AI and remote sensing might evolve together, and how the classification methods we are learning today will adapt. In a similar way that machine learning methods pose interpretability issues, AI-based approaches often function “black boxes” with decision-making processes that are difficult to trace. As AI inevitably weaves its way the way researchers conduct geospatial analysis, it will be critical to carry forward the lessons learned from ML challenges, particularly regarding model transparency and bias in training data.</p>
+<p>One of the key takeaways for me from this week’s content is that high accuracy alone is not enough. Methods should be interpretable, reproducible, and applicable to real-world scenarios.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-farhadi2025" class="csl-entry" role="listitem">
-Farhadi, Hadi, Hamid Ebadi, Abbas Kiani, and Ali Asgary. 2025. <span>“Introducing a New Index for Flood Mapping Using Sentinel-2 Imagery (SFMI).”</span> <em>Computers &amp; Geosciences</em> 194 (January): 105742. <a href="https://doi.org/10.1016/j.cageo.2024.105742">https://doi.org/10.1016/j.cageo.2024.105742</a>.
+<div id="ref-svobodaRandomForestClassification2022" class="csl-entry" role="listitem">
+Svoboda, Jan, Přemysl Štych, Josef Laštovička, Daniel Paluba, and Natalia Kobliuk. 2022. <span>“Random <span>Forest Classification</span> of <span>Land Use</span>, <span>Land-Use Change</span> and <span>Forestry</span> (<span>LULUCF</span>) <span>Using Sentinel-2 Data</span>—<span>A Case Study</span> of <span>Czechia</span>.”</span> <em>Remote Sensing</em> 14 (5, 5): 1189. <a href="https://doi.org/10.3390/rs14051189">https://doi.org/10.3390/rs14051189</a>.
 </div>
-<div id="ref-hillson2019" class="csl-entry" role="listitem">
-Hillson, Roger, Austin Coates, Joel D. Alejandre, Kathryn H. Jacobsen, Rashid Ansumana, Alfred S. Bockarie, Umaru Bangura, Joseph M. Lamin, and David A. Stenger. 2019. <span>“Estimating the Size of Urban Populations Using Landsat Images: A Case Study of Bo, Sierra Leone, West Africa.”</span> <em>International Journal of Health Geographics</em> 18 (1): 16. <a href="https://doi.org/10.1186/s12942-019-0180-1">https://doi.org/10.1186/s12942-019-0180-1</a>.
+<div id="ref-yanDetectingSeaIce2019" class="csl-entry" role="listitem">
+Yan, Qingyun, and Weimin Huang. 2019. <span>“Detecting <span>Sea Ice From TechDemoSat-1 Data Using Support Vector Machines With Feature Selection</span>.”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em> 12 (5): 1409–16. <a href="https://doi.org/10.1109/JSTARS.2019.2907008">https://doi.org/10.1109/JSTARS.2019.2907008</a>.
 </div>
 </div>
 </section>
@@ -686,13 +680,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      <a href="./week5.html" class="pagination-link" aria-label="Intro to Google Earth Engine">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to Google Earth Engine</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Presentation">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Presentation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

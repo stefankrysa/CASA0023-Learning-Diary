@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Getting started with remote sensing – CASA0023 Learning Diary</title>
+<title>5&nbsp; Intro to Google Earth Engine – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./week6.html" rel="next">
+<link href="./week4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to Google Earth Engine</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,7 +134,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></span></a>
   </div>
 </li>
@@ -158,7 +158,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link">
+  <a href="./week5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to Google Earth Engine</span></span></a>
   </div>
 </li>
@@ -184,14 +184,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">1.2</span> Applications</a>
-  <ul class="collapse">
-  <li><a href="#sentinel-research" id="toc-sentinel-research" class="nav-link" data-scroll-target="#sentinel-research"><span class="header-section-number">1.2.1</span> Sentinel research</a></li>
-  <li><a href="#landsat-research" id="toc-landsat-research" class="nav-link" data-scroll-target="#landsat-research"><span class="header-section-number">1.2.2</span> Landsat research</a></li>
-  <li><a href="#thoughts" id="toc-thoughts" class="nav-link" data-scroll-target="#thoughts"><span class="header-section-number">1.2.3</span> Thoughts</a></li>
-  </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">5.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -200,7 +195,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to Google Earth Engine</span></h1>
 </div>
 
 
@@ -217,48 +212,47 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
-<p>This week, we got started learning about the basics of remote sensing and earth observation. This started with an overview of how sensors collect data. Satellites can detect electromagnetic waves passively or actively, whereby data is either reflected off an object by the sun’s light or a sensor produces its own energy source for illumination, respectively. We learned the fundamentals of EMR, such as identifying wavelength or amplitude, and the range of the electromagnetic spectrum, as depicted in Figure 1. When EMR interacts with a surface, what is reflected is often modified due to energy being absorbed, transmitted through, or scattered. This allows for the detection of spectral signatures, which are unique patterns of reflected or emitted electromagnetic radiation that specific materials exhibit. We also touched on important concepts of spatial, spectral, temporal, and radiometric resolution, which define the characteristics and quality of remotely sensed data.</p>
+<section id="summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
+<p>This week, we had our first go at using Google Earth Engine (GEE). During the lecture, we covered GEE fundamentals, including an introduction to its basic object classes (Figure 1) and key terminology. We explored the advantages of using GEE, particularly its cloud-based processing capabilities, emphasizing the importance of minimizing loops and using server-side functions to optimize performance. It was impressive to hear about how the same task that would take hours to process in R can be executed in mere seconds using GEE. Some other important notes include the fact that GEE operates on a 256x256 grid system, where aggregation plays a crucial role in handling large datasets, and how the software automatically reprojects data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/EM_Spectrum_Properties_edit.svg" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Electromagnetic Spectrum. Source: https://upload.wikimedia.org/wikipedia/commons/c/cf/EM_Spectrum_Properties_edit.svg</figcaption>
+<p><img src="images/objectsGEE.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Google Earth Engine Object Classes. Source: GEE</figcaption>
 </figure>
 </div>
-<p>In the practical, we took a closer look at working with Sentinel-2 and Landsat data in SNAP. We started by loading and merging different bands to play around with how they combined to create composite images. True-colour composites create an image that replicate natural colours familiar to humans, while false-colour composites utilize combinations of non-visible bands, such as near-infrared, along with visible bands, to highlight specific features or phenomena, like vegetation. We moved on to compute the tasselled cap transformation in order identify areas of brightness, greenness and wetness, a method particularly useful for identifying urban land use. Then, to classify different land use areas, we selected and exported pixels covering a variety of land covers. Upon loading this data into R, plotting the difference in pixel values across bands highlighted the unique spectral signatures of various land types.</p>
-<p>Given that Sentinel data typically has a lower spatial and temporal resolution compared to Landsat, I am curious about why researchers would continue to opt for using Landsat data. Since Landsat has been in operation for longer than Sentinel, Landsat provides a longer time range of data, which could be useful for certain research questions. Still, I wonder about any other upsides to using data from one satellite over the other.</p>
+<p>We moved on to getting familiar with the GEE interface and typical processes, from geometry operations to machine learning. For the practical session, we experimented with some of these, including Principal Component Analysis (PCA) and Normalized Difference Vegetation Index (NDVI) calculations. This was my first time coding in Java, which came with its own learning curve. It was interesting to see the differences in working with R and Java particularly during PCA, where a process that would have taken just a single line in R actually was much less efficient in GEE. Figure 3 shows the NDVI output produced for Delhi.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/delhi.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. NDVI Output for Delhi.</figcaption>
+</figure>
+</div>
+<p>Overall, it struck me that GEE makes remote sensing analysis a lot easier by reducing the need for local computing resources. On the other hand, its proprietary nature raises concerns. Given that Google owns and maintains the platform, there is always a risk that it could be restricted or discontinued, which is particularly problematic considering the growing reliance on GEE in research. The broader issue of depending on big tech firms for essential scientific tools is especially relevant in today’s political climate, where corporate decisions can have far-reaching consequences for research and data accessibility.</p>
 </section>
-<section id="applications" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
-<p>Since getting familiar with Landsat and Sentinel imagery formed a major component of the practical, I was curious to find existing research using these sources. I found Landsat and Sentinel imagery serve as valuable resources for monitoring environmental and land use.</p>
-<section id="sentinel-research" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="sentinel-research"><span class="header-section-number">1.2.1</span> Sentinel research</h3>
-<p>Research by Farhadi <em>et al.</em> <span class="citation" data-cites="farhadi2025">(<a href="references.html#ref-farhadi2025" role="doc-biblioref">2025</a>)</span> was one paper that stood out to me. In this work, the authors use Sentinel imagery at a 10m resolution to build a new spectral index for flood mapping. Specifically, the method utilizes visible and NIR bands to discriminate water characteristics. This new technique, they posit, provides a more efficient method for monitoring flood zones without reliance on thresholding methods, whereby different selections can significantly change results. An index accuracy of above 97% for pre-flood, flooded, and post-flood extraction on two test areas are promising results for their proposed method. Successfully developing this method would not have been possible if not for the high spatial resolution of Sentinel imagery.</p>
+<section id="applications" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> Applications</h2>
+<p>Google Earth Engine has seen a significant surge in adoption among researchers over the past decade, primarily due to its ability to efficiently handle big data and provide access to an extensive collection of satellite imagery and geospatial datasets from a single platform. Many of the articles I reviewed this week emphasize these advantages, particularly in terms of computational efficiency and accessibility.</p>
+<p>One of GEE’s most notable strengths is its ability to drastically reduce processing time by leveraging cloud-based servers. This is especially beneficial when dealing with the “big data problem” posed by heterogeneous satellite imagery collected from multiple sensors, which would otherwise require substantial local computing power <span class="citation" data-cites="zhaoProgressTrendsApplication2021">(<a href="references.html#ref-zhaoProgressTrendsApplication2021" role="doc-biblioref">Zhao et al. 2021</a>)</span>. By enabling large-scale analysis that would be prohibitively time-consuming on traditional systems, GEE has become an invaluable tool in remote sensing research. For instance, in assessing the efficiency of GEE in crop mapping, Sheletov <em>et al.</em> (@-shelestovExploringGoogleEarth2017) found that Google Earth Engine was highly effective in enabling access to remote sensing products and provided robust pre-processing capabilities.</p>
+<p>Beyond computational speed, another major advantage of GEE is its accessibility, which democratizes access to high-level geospatial analysis and enables researchers to conduct long-term, large-scale studies that would typically be computationally prohibitive. The ability to analyze long-term environmental trends is particularly powerful in studies of land use and land cover change. Researchers have used GEE to investigate transformations in various ecosystems, from tracking land cover changes near river basins <span class="citation" data-cites="zurqaniGeospatialAnalysisLand2018">(<a href="references.html#ref-zurqaniGeospatialAnalysisLand2018" role="doc-biblioref">Zurqani et al. 2018</a>)</span> to monitoring global forest change over decades (<span class="citation" data-cites="hansenHighResolutionGlobalMaps2013">Hansen et al. (<a href="references.html#ref-hansenHighResolutionGlobalMaps2013" role="doc-biblioref">2013</a>)</span>). Work by Hansen <em>et al.</em> [@-hansenHighResolutionGlobalMaps2013] work particularly stood out to me, showcasing GEE’s capability to process massive datasets at a global scale, which would be nearly impossible with conventional GIS and remote sensing tools.</p>
+<p>Given the benefits to using GEE, it doesn’t come as much of a surprise that many earth observation researchers prefer this tool today. Its ability to streamline complex analyses while providing easy access to datasets has transformed the way large-scale earth observation studies are conducted.</p>
 </section>
-<section id="landsat-research" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="landsat-research"><span class="header-section-number">1.2.2</span> Landsat research</h3>
-<p>Work by Hillson <em>et al.</em> <span class="citation" data-cites="hillson2019">(<a href="references.html#ref-hillson2019" role="doc-biblioref">2019</a>)</span>, meanwhile, relies on Landsat imagery. In their research, they aim to estimate population density using a regression model with covariates derived from Landsat imagery of Bo, Sierre Leone. Analysis began with 379 Landsat 5 thematic mapper candidate covariates before narrowing down the selection to six for the final model. Covariates encompass a range of data from Landsat, which include pixel values and a variety of transformations of these values. The final model was found to be effective for predicting population density. This was true at even at a 30m spatial resolution. The authors highlight the utility of such a method to estimate local populations in environments where census data is old or unreliable.</p>
-</section>
-<section id="thoughts" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="thoughts"><span class="header-section-number">1.2.3</span> Thoughts</h3>
-<p>While both works provided an interesting showcase of the practical applications of earth observation in different settings, as someone new to this field it was interesting for me to see how the researchers communicated their findings differently. I found the analysis done by Farhadi <em>et al.</em> <span class="citation" data-cites="farhadi2025">(<a href="references.html#ref-farhadi2025" role="doc-biblioref">2025</a>)</span> to be far simpler to follow than that of Hillson <em>et al.</em> <span class="citation" data-cites="hillson2019">(<a href="references.html#ref-hillson2019" role="doc-biblioref">2019</a>)</span>. To me, the former did a better job of outlining their methods in an easy-to-understand way. Perhaps more complex papers will make more sense later in this course, but I also think this points to an important issue in remote sensing research: how to make the work accessible and easy to understand for the general public. As this field gains traction and recognition among policy-makers, it is increasingly important to communicate research in a way that is accessible to all, not just academics.</p>
-</section>
-</section>
-<section id="reflection" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
-<p>In the context of climate change and rapid urbanization across the globe, earth observation presents fascinating opportunities to better understand and respond to environmental and land use change.</p>
-<p>Sentinel imagery, given at a high spatial and temporal resolution, allows researchers to frequently monitor less-accessible areas with great accuracy. This capability can be leveraged both proactively, by assessing risks and guiding the development of preventative infrastructure, and reactively, by coordinating emergency responses following extreme weather events. Such applications are critical for effectively targeting aid and implementing mitigation strategies to enhance resilience against future events. As we have seen, highly effective methods for monitoring flood zones have already been developed.</p>
-<p>We also saw the uses of earth observation for urban environments. Monitoring land use and change is valuable to understanding settlement and urban growth patterns and can be employed to make better-informed planning decisions for sustainable growth. Landsat, in operation for over 40 years now, provides a huge range of data for a long period of time. This could be particularly useful in studies analyzing land use change over time.</p>
-<p>It was interesting to think about how the tools we employed in the practical this week are applicable in a broader context to monitoring landscapes inside and out of cities. Through techniques such as land classification it is possible to conduct analyses of land use and cover applicable to the issues outlined above. This practical was also a humbling reminder of the value of user-friendly software. By running into a handful of issues using SNAP, I was reminded not to take for granted the flexibility inherent to tools like R.</p>
+<section id="reflection" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
+<p>This week highlighted many of the advantages of GEE, particularly its efficiency in data access and processing. Through this week’s lecture, practical, and reviewed literature, it became clear that GEE is an exciting tool that opens up many avenues for research. However, it is equally important to acknowledge some of the platform’s limitations.</p>
+<p>A key concern, as mentioned in the summary, is that Google has full control over GEE. If the company were to restrict or eliminate free access in the future, researchers who rely heavily on the platform could face significant challenges. As we’ve seen throughout this course, Earth observation research plays a crucial role in informing policy, particularly in environmental and urban planning. To ensure the continuity of their work, researchers should avoid over-reliance on GEE and maintain proficiency in alternative tools as well. Open-source programs like R, for instance, provide greater long-term stability. This raises broader questions about the role of private corporations in shaping access to scientific data and analytical tools. While GEE currently serves as a powerful resource, dependency on Google’s infrastructure underscores the importance of advocating for more open-access platforms.</p>
+<p>As I begin to work more with GEE, I am increasingly I am increasingly curious about the differences with R, and the respective advantages and disadvantages of each. As we saw in the practical this week, while GEE excels in handling large datasets and reducing processing time, R can sometimes be more efficient for specific analytical tasks. To me, this fact reinforced the importance of being familiar with multiple tools to select the best approach for a given research question. Personally, I currently feel more comfortable with R due to my greater experience with it and would likely default to it unless working with particularly large or computationally intensive datasets. It will be interesting to see how my perspective changes as I continue to explore and work with GEE.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-farhadi2025" class="csl-entry" role="listitem">
-Farhadi, Hadi, Hamid Ebadi, Abbas Kiani, and Ali Asgary. 2025. <span>“Introducing a New Index for Flood Mapping Using Sentinel-2 Imagery (SFMI).”</span> <em>Computers &amp; Geosciences</em> 194 (January): 105742. <a href="https://doi.org/10.1016/j.cageo.2024.105742">https://doi.org/10.1016/j.cageo.2024.105742</a>.
+<div id="ref-hansenHighResolutionGlobalMaps2013" class="csl-entry" role="listitem">
+Hansen, M. C., P. V. Potapov, R. Moore, M. Hancher, S. A. Turubanova, A. Tyukavina, D. Thau, et al. 2013. <span>“High-<span>Resolution Global Maps</span> of 21st-<span>Century Forest Cover Change</span>.”</span> <em>Science</em> 342 (6160): 850–53. <a href="https://doi.org/10.1126/science.1244693">https://doi.org/10.1126/science.1244693</a>.
 </div>
-<div id="ref-hillson2019" class="csl-entry" role="listitem">
-Hillson, Roger, Austin Coates, Joel D. Alejandre, Kathryn H. Jacobsen, Rashid Ansumana, Alfred S. Bockarie, Umaru Bangura, Joseph M. Lamin, and David A. Stenger. 2019. <span>“Estimating the Size of Urban Populations Using Landsat Images: A Case Study of Bo, Sierra Leone, West Africa.”</span> <em>International Journal of Health Geographics</em> 18 (1): 16. <a href="https://doi.org/10.1186/s12942-019-0180-1">https://doi.org/10.1186/s12942-019-0180-1</a>.
+<div id="ref-zhaoProgressTrendsApplication2021" class="csl-entry" role="listitem">
+Zhao, Qiang, Le Yu, Xuecao Li, Dailiang Peng, Yongguang Zhang, and Peng Gong. 2021. <span>“Progress and <span>Trends</span> in the <span>Application</span> of <span>Google Earth</span> and <span>Google Earth Engine</span>.”</span> <em>Remote Sensing</em> 13 (18, 18): 3778. <a href="https://doi.org/10.3390/rs13183778">https://doi.org/10.3390/rs13183778</a>.
+</div>
+<div id="ref-zurqaniGeospatialAnalysisLand2018" class="csl-entry" role="listitem">
+Zurqani, Hamdi A., Christopher J. Post, Elena A. Mikhailova, Mark A. Schlautman, and Julia L. Sharp. 2018. <span>“Geospatial Analysis of Land Use Change in the <span>Savannah River Basin</span> Using <span>Google Earth Engine</span>.”</span> <em>International Journal of Applied Earth Observation and Geoinformation</em> 69 (July): 175–85. <a href="https://doi.org/10.1016/j.jag.2017.12.006">https://doi.org/10.1016/j.jag.2017.12.006</a>.
 </div>
 </div>
 </section>
@@ -686,13 +680,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      <a href="./week4.html" class="pagination-link" aria-label="Policy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Presentation">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Presentation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week6.html" class="pagination-link" aria-label="Classification I">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
