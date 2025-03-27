@@ -8,7 +8,7 @@ We first covered some key SAR concepts, including the difference between photogr
 
 Different SAR polarizations help distinguish between various surface types. Vertical-vertical (VV) polarization is most effective for detecting surface roughness, while vertical-horizontal (VH) polarization is better suited for analyzing volume scatterers like vegetation. Double-bounce reflections, where radar waves bounce between two surfaces (e.g., buildings and the ground), can also be identified, making SAR a useful tool for mapping urban environments. Figure 1 illustrates these SAR fundamentals.
 
-![Figure 1. SAR Basics. Source: NEC](https://www.nec.com/en/global/insights/article/2021030004/images/001.jpg)
+![Figure 1. SAR Basics. Source: NEC.](https://www.nec.com/en/global/insights/article/2021030004/images/001.jpg)
 
 SAR data types and techniques can be applied to different purposes. SAR data is presented in three forms: Power scale for statistical analysis, amplitude scale for visualization and dB scale for detecting differences in backscatter intensity. A common application of SAR is change-detection, which can be achieved through image subtraction or ratio-based techniques (e.g., mean and log ratios), paired with statistical methods like t-tests to identify significant differences. Image fusion at the decision-, obect-, or pixel-level can also be employed. SAR is effective for generating Digital Elevation Models (DEMs) as well. Interferometric SAR (InSAR) is a technique that leverages phase differences between two SAR images taken at different times or from slightly different angles to generate DEMs. Differential InSAR (DInSAR), meanwhile, extends this method to detect surface changes over time, allowing for precise analysis of land movement.
 
