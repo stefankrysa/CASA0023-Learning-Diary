@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Classification I – CASA0023 Learning Diary</title>
+<title>8&nbsp; SAR – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week7.html" rel="next">
-<link href="./week5.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./week7.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -164,7 +144,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
   </div>
 </li>
@@ -176,7 +156,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+  <a href="./week8.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
@@ -196,9 +176,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">6.2</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">8.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -207,7 +187,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></h1>
 </div>
 
 
@@ -224,49 +204,48 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
-<p>After going through Google Earth Engine basics last week, we were ready to delve deeper into classification methods using GEE. The lecture provided an overview of methodologies and applications. We started by looking at how classification builds on expert systems (Figure 1), which we learned are systems that use human knowledge to solve problems.</p>
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<p>In our last lecture, we shifted focus to SAR (Synthetic Aperture Radar), an active sensor system that differs from the passive satellites we’ve learned about so far. Unlike passive sensors that rely on reflected sunlight, SAR actively emits electromagnetic signals and records the backscatter.</p>
+<p>We first covered some key SAR concepts, including the difference between photographic and radar apertures. In optical imaging, a photographic aperture refers to the opening in a camera lens that controls the amount of light entering. In radar, however, “aperture” refers to the antenna’s effective size. A longer antenna produces a narrower radar beam, which improves spatial resolution. Since physically long antennas are impractical for spaceborne sensors, SAR simulates a larger antenna by capturing multiple backscatter signals as the sensor moves along its flight path. This technique effectively increases resolution, allowing SAR to capture fine-scale surface details.</p>
+<p>Different SAR polarizations help distinguish between various surface types. Vertical-vertical (VV) polarization is most effective for detecting surface roughness, while vertical-horizontal (VH) polarization is better suited for analyzing volume scatterers like vegetation. Double-bounce reflections, where radar waves bounce between two surfaces (e.g., buildings and the ground), can also be identified, making SAR a useful tool for mapping urban environments. Figure 1 illustrates these SAR fundamentals.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/expertsyst.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Expert Systems. Source: Aftab Alam</figcaption>
+<p><img src="https://www.nec.com/en/global/insights/article/2021030004/images/001.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. SAR Basics. Source: NEC</figcaption>
 </figure>
 </div>
-<p>Machine learning (ML), as a computational modeling of the learning process, mimics inductive learning, whereby humans generalize from examples to reach logical conclusions. For computers to achieve this, ML searches through data to explain patterns and make predictions. I was surprised to learn I’d already worked with ML before with regression analysis. We then spent time focusing on a few specific supervised classification methods, including classification and regression trees (CART), random forests, and support vector machines.</p>
-<p>Classification trees categorize data into discrete classes using classic “yes/no” decision tree models. In contrast, regression trees predict continuous values, making them useful when linear regression is insufficient. These models divide data into segments, placing breaks where the sum of squared residuals (SSR) is minimized. The root variable is chosen to reduce Gini impurity, and methods like setting a minimum observation threshold (e.g., 20 pixels in Earth observation) or weakest-link pruning help prevent overfitting.</p>
-<p>Random forests extend CART by combining multiple decision trees, where the most common outcome (“votes”) across trees determines the final classification. I applied this method in the practical exercise, using it to classify land cover in Boston (Figure 2)</p>
+<p>SAR data types and techniques can be applied to different purposes. SAR data is presented in three forms: Power scale for statistical analysis, amplitude scale for visualization and dB scale for detecting differences in backscatter intensity. A common application of SAR is change-detection, which can be achieved through image subtraction or ratio-based techniques (e.g., mean and log ratios), paired with statistical methods like t-tests to identify significant differences. Image fusion at the decision-, obect-, or pixel-level can also be employed. SAR is effective for generating Digital Elevation Models (DEMs) as well. Interferometric SAR (InSAR) is a technique that leverages phase differences between two SAR images taken at different times or from slightly different angles to generate DEMs. Differential InSAR (DInSAR), meanwhile, extends this method to detect surface changes over time, allowing for precise analysis of land movement.</p>
+<p>During the practical session, we applied SAR techniques by working through <a href="https://bellingcat.github.io/RS4OSINT/C3_Blast.html">Ollie Ballinger’s</a> analysis of the Beirut explosion. An adapted pixelwise t-test was used to detect changes between pre- and post-explosion SAR data, revealing damage to built infrastructure. The results (Figure 2) highlighted SAR’s unique ability to detect change in environments.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/boston.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 2. Random Forest Classification Output for LULC in Boston, MA, distinguishing high-density urban areas (dark pink), low-density urban areas (pink), forests (dark green), grass (light green) and water (purple).</figcaption>
+<p><img src="images/change.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. Surface change in Beirut post-explosion, yellow areas indicate a significant change at the 95% confidence level.</figcaption>
 </figure>
 </div>
-<p>Lastly, we covered SVMs, which function similarly to logistic regression but incorporate additional parameters for flexibility. Adjusting factors like the kernel type, C (which influences decision boundary maximization), and gamma (which controls the influence of training examples) alters the classification. While these methods provide high accuracy, they also present challenges. SVMs and random forests essentially function as “black box” models, making their decision processes less interpretable than some other classification methods, like decision trees. This issue resonated with me. While decision trees provide step-by-step walkthroughs, the logic behind an SVM or random forest is less clear. This can cause issues with transparency, making it difficult explain to why classifications are presented as such. That said, through the practical I was impressed by how such complex methods can be executed in relatively little code.</p>
+<p>A recurring theme throughout this week, and this module, has been the importance of choosing the right method for the research question at hand. Its critical to think carefully about the problem and work backwards from there. Learning about SAR revealed entirely new possibilities for analysis using remote sensing but reinforced this idea that all methods have strengths and limitations which must be carefully considered.</p>
 </section>
-<section id="application" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
-<p>Following this week’s lecture, I was curious to explore previous work using these classification methods. I decided to focus particularly on random forests and support vector machines.</p>
-<p>In a study by Svoboda et al.&nbsp;[@-svobodaRandomForestClassification2022], the authors utilize random forests in Google Earth Engine to classify land in Czechia for the LULUCF (Land Use, Land-Use Change, and Forestry) greenhouse gas inventory. While Czechia traditionally uses cadastral data for this task in the past, the study highlighted the potential for Earth observation data to be applied in this context. I noticed the authors use the median method for mosaicking, aligning with good practices we discussed in class. Overall, the model achieved the highest accuracy for cropland and woodland but was slightly less effective for settlements <span class="citation" data-cites="svobodaRandomForestClassification2022">(<a href="references.html#ref-svobodaRandomForestClassification2022" role="doc-biblioref">Svoboda et al. 2022</a>)</span>. The authors highlight the potential of cloud-based classification with EO data to enhance LULUCF applications globally and emphasize the need for stronger collaboration between end-users and EO experts to maximize its impact <span class="citation" data-cites="svobodaRandomForestClassification2022">(<a href="references.html#ref-svobodaRandomForestClassification2022" role="doc-biblioref">Svoboda et al. 2022</a>)</span>.</p>
-<p>Support vector machines have also been adopted for remote sensing tasks. Yan and Huang [@-yanDetectingSeaIce2019], for example, apply SVMs to detect sea ice, arguing that they provide better accuracy than maximum likelihood classification. A key advantage highlighted was the model’s robustness with limited training data. The study was particularly interesting because it addressed a gap in the application of SVMs to sea ice detection. Furthermore, the authors utilize Delay Doppler Mapping data from satellite TDS-1, a form of remote sensing data I hadn’t encountered before. They concluded that SVMs outperformed neural network (NN) and convolutional neural network (CNN) algorithms <span class="citation" data-cites="yanDetectingSeaIce2019">(<a href="references.html#ref-yanDetectingSeaIce2019" role="doc-biblioref">Yan and Huang 2019</a>)</span>. While their analysis was not conducted in GEE, it still provided valuable insights into applying classification methods and working with new datasets.</p>
-<p>These readings increased my appreciation for striking a balance between model complexity and interpretability. The more I explore EO applications, the more critically I can assess them. I found Svoboda et al. <span class="citation" data-cites="svobodaRandomForestClassification2022">(<a href="references.html#ref-svobodaRandomForestClassification2022" role="doc-biblioref">Svoboda et al. 2022</a>)</span> particularly effective in clearly outlining their policy objectives, tools, and methods, making the study easy to follow. In contrast, the second paper was less straightforward in connecting its findings to broader applications. I believe the most valuable research not only presents methodological advancements but also links them to actionable outcomes, ensuring their relevance beyond academic contexts.</p>
+<section id="application" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
+<p>SAR has a wide range of applications across various fields. I found a categorization by Tsokas et al.&nbsp;[@-tsokasSARDataApplications2022] particularly useful for understanding its diverse uses:</p>
+<ul>
+<li><p>Mapping &amp; Land Classification: including land cover classification, forest monitoring, shellfish and oil spill detection, sea ice, and glaciers.</p></li>
+<li><p>Parameter Retrieval: including ocean topography, wind and wave retrieval, and soil moisture estimation.</p></li>
+<li><p>Object Detection: including object detection and recognition, as well as navigation.</p></li>
+</ul>
+<p>With regard to object detection, one application I found particularly interesting is the use of SAR for detecting ships. In their study, Zhang et al.&nbsp;[@-zhangSARShipDetection2021] review the use of the SAR Ship Detection Dataset (SSDD) for deep learning-based SAR ship detection. SSDD is an open dataset produced by one of the authors and includes SAR images with varying resolutions, polarizations, and surface conditions. The authors discuss the dataset’s widespread adoption but also acknowledge enduring challenges and areas for improvement. To me, this paper highlighted the value of open data and collaboration for advancing the field more broadly. I respect that, while the authors emphasized the uptake in use of their dataset, they are also cognizant and transparent about its limitations. This paper also underscored SAR’s versatility and practical application, particularly in terms of maritime traffic control, trade monitoring, and naval defense.</p>
+<p>Another SAR application that stood out to me was wetland monitoring, as explored by Adeli et al.&nbsp;[@-adeliWetlandMonitoringUsing2020]. Wetlands provide essential ecosystem services but face increasing threats from human activity and climate change. The authors highlight how SAR is well-suited for wetland analysis because it can detect variations in surface roughness and moisture content, capabilities that are challenging for other remote sensing sources. The study conducts a meta-analysis of 172 papers, revealing trends such as the growing use of multi-sensor SAR data and the integration of C- and L-band frequencies, which improve classification accuracy. However, challenges remain, including backscatter similarity between different wetland types, difficulties in selecting the optimal SAR specifications (e.g., incidence angle, frequency, and polarization), and geometric distortions in SAR imagery. The authors emphasize the need for further research to address these issues and maximize SAR’s effectiveness in wetland monitoring and environmental change detection.</p>
+<p>SAR’s unique capabilities make it potentially better suited for certain analyses than the passive sensors we’ve learned about and worked with in previous weeks. These papers demonstrate how SAR can be applied to diverse issues, enabling more effective land management, trade monitoring, and security measures by providing detailed surface insights. SAR’s ability to capture data regardless of weather conditions or time of day makes it an invaluable tool for continuous monitoring and rapid response applications.</p>
 </section>
-<section id="reflection" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
-<p>During the lecture this week, we skipped over the maximum likelihood portion of the presentation. It was mentioned that, these days, machine learning is more relevant. This made me wonder, are there still contexts where maximum likelihood remains useful? While ML approaches dominate, it’s important to remember that no model is universally superior.</p>
-<p>While I read the papers above, I was reminded that even sophisticated ML models are not infallible. For instance, the Czechia study showed lower accuracy for urban areas, demonstrating that advanced methods still struggle with certain classifications. As ML continues to shape classification tasks, researchers and practitioners must remain aware of its limitations, ensuring results are taken with caution rather than assumed to be inherently superior. This also links back to interpretability. While methods like random forests and SVMs may offer higher accuracy, their complexity can make them difficult to interpret. This trade-off between performance and transparency is crucial, particularly in contexts where decisions in analysis must be explainable to stakeholders.</p>
-<p>With artificial intelligence now a major topic of discussion across many fields, this week’s content also led me to wonder how advanced AI and remote sensing might evolve together, and how the classification methods we are learning today will adapt. In a similar way that machine learning methods pose interpretability issues, AI-based approaches often function “black boxes” with decision-making processes that are difficult to trace. As AI inevitably weaves its way the way researchers conduct geospatial analysis, it will be critical to carry forward the lessons learned from ML challenges, particularly regarding model transparency and bias in training data.</p>
-<p>One of the key takeaways for me from this week’s content is that high accuracy alone is not enough. Methods should be interpretable, reproducible, and applicable to real-world scenarios.</p>
+<section id="reflection" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
+<p>It was interesting to learn about a new satellite type this week and explore the different applications that come with it. SAR offers several advantages, such as its ability to penetrate cloud cover and capture surface texture at a high resolution. Being able to collect data in all weather conditions makes it particularly useful in circumstances where frequent and continuous monitoring is necessary. SAR also, however, comes with limitations. The data can be complex to process and interpret, perhaps less intuitive than dealing with passive sensors.</p>
+<p>What struck me was the clear policy applications of SAR across a wide range of fields. In defense, SAR-based object detection can enhance surveillance and border security, providing critical intelligence that would be difficult to obtain with passive sensors alone. In trade, SAR can play a key role in monitoring maritime traffic, tracking illegal fishing activities, and overseeing port operations. For environmental change, it offers powerful methods for tracking issues such as deforestation, wetland loss, glacial retreat, and urban expansion. Altogether, SAR presents a great opportunity to create new evidence bases on which decision-making and policy can be built.</p>
+<p>Since this is my last diary entry, I’ve been reflecting more broadly on everything we’ve covered through the term. The range of satellites, methods, and applications we’ve explored has been both impressive and inspiring. Remote sensing offers powerful tools to address a vast array of issues like urban planning, environmental conservation, public health, economic development and conflict, just to name a few. There are so many different ways to use these technologies to manage our cities and natural environments for the better.</p>
+<p>The key challenge, however, is choosing the right data and methods for the research question at hand. And I would argue this task can be just as difficult as conducting the analysis itself. With so many data sources, analytical techniques, and even methods for validating other methods, it’s crucial to think carefully about the problem and select the approach that best fits the specific context. While the vast amount of available data and analytical possibilities is exciting, it can also feel overwhelming. Being precise with the research question and critically assessing the best way to approach it is essential.</p>
+<p>Ultimately, remote sensing is not just a technical exercise, it requires deep reflection. The best way to ensure meaningful results, strong research, and real-world project success is to be deliberate about data selection, methodology, and interpretation.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-svobodaRandomForestClassification2022" class="csl-entry" role="listitem">
-Svoboda, Jan, Přemysl Štych, Josef Laštovička, Daniel Paluba, and Natalia Kobliuk. 2022. <span>“Random <span>Forest Classification</span> of <span>Land Use</span>, <span>Land-Use Change</span> and <span>Forestry</span> (<span>LULUCF</span>) <span>Using Sentinel-2 Data</span>—<span>A Case Study</span> of <span>Czechia</span>.”</span> <em>Remote Sensing</em> 14 (5, 5): 1189. <a href="https://doi.org/10.3390/rs14051189">https://doi.org/10.3390/rs14051189</a>.
-</div>
-<div id="ref-yanDetectingSeaIce2019" class="csl-entry" role="listitem">
-Yan, Qingyun, and Weimin Huang. 2019. <span>“Detecting <span>Sea Ice From TechDemoSat-1 Data Using Support Vector Machines With Feature Selection</span>.”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em> 12 (5): 1409–16. <a href="https://doi.org/10.1109/JSTARS.2019.2907008">https://doi.org/10.1109/JSTARS.2019.2907008</a>.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -692,13 +671,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week5.html" class="pagination-link" aria-label="Intro to Google Earth Engine">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to Google Earth Engine</span></span>
+      <a href="./week7.html" class="pagination-link" aria-label="Classiciation II">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classiciation II</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week7.html" class="pagination-link" aria-label="Classiciation II">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classiciation II</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
