@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -227,14 +247,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="application" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
-<p>SAR has a wide range of applications across various fields. I found a categorization by Tsokas et al.&nbsp;[@-tsokasSARDataApplications2022] particularly useful for understanding its diverse uses:</p>
+<p>SAR has a wide range of applications across various fields. I found a categorization by Tsokas et al. <span class="citation" data-cites="tsokasSARDataApplications2022">(<a href="references.html#ref-tsokasSARDataApplications2022" role="doc-biblioref">2022</a>)</span> particularly useful for understanding its diverse uses:</p>
 <ul>
 <li><p>Mapping &amp; Land Classification: including land cover classification, forest monitoring, shellfish and oil spill detection, sea ice, and glaciers.</p></li>
 <li><p>Parameter Retrieval: including ocean topography, wind and wave retrieval, and soil moisture estimation.</p></li>
 <li><p>Object Detection: including object detection and recognition, as well as navigation.</p></li>
 </ul>
-<p>With regard to object detection, one application I found particularly interesting is the use of SAR for detecting ships. In their study, Zhang et al.&nbsp;[@-zhangSARShipDetection2021] review the use of the SAR Ship Detection Dataset (SSDD) for deep learning-based SAR ship detection. SSDD is an open dataset produced by one of the authors and includes SAR images with varying resolutions, polarizations, and surface conditions. The authors discuss the dataset’s widespread adoption but also acknowledge enduring challenges and areas for improvement. To me, this paper highlighted the value of open data and collaboration for advancing the field more broadly. I respect that, while the authors emphasized the uptake in use of their dataset, they are also cognizant and transparent about its limitations. This paper also underscored SAR’s versatility and practical application, particularly in terms of maritime traffic control, trade monitoring, and naval defense.</p>
-<p>Another SAR application that stood out to me was wetland monitoring, as explored by Adeli et al.&nbsp;[@-adeliWetlandMonitoringUsing2020]. Wetlands provide essential ecosystem services but face increasing threats from human activity and climate change. The authors highlight how SAR is well-suited for wetland analysis because it can detect variations in surface roughness and moisture content, capabilities that are challenging for other remote sensing sources. The study conducts a meta-analysis of 172 papers, revealing trends such as the growing use of multi-sensor SAR data and the integration of C- and L-band frequencies, which improve classification accuracy. However, challenges remain, including backscatter similarity between different wetland types, difficulties in selecting the optimal SAR specifications (e.g., incidence angle, frequency, and polarization), and geometric distortions in SAR imagery. The authors emphasize the need for further research to address these issues and maximize SAR’s effectiveness in wetland monitoring and environmental change detection.</p>
+<p>With regard to object detection, one application I found particularly interesting is the use of SAR for detecting ships. In their study, Zhang et al. <span class="citation" data-cites="zhangSARShipDetection2021">(<a href="references.html#ref-zhangSARShipDetection2021" role="doc-biblioref">2021</a>)</span> review the use of the SAR Ship Detection Dataset (SSDD) for deep learning-based SAR ship detection. SSDD is an open dataset produced by one of the authors and includes SAR images with varying resolutions, polarizations, and surface conditions. The authors discuss the dataset’s widespread adoption but also acknowledge enduring challenges and areas for improvement. To me, this paper highlighted the value of open data and collaboration for advancing the field more broadly. I respect that, while the authors emphasized the uptake in use of their dataset, they are also cognizant and transparent about its limitations. This paper also underscored SAR’s versatility and practical application, particularly in terms of maritime traffic control, trade monitoring, and naval defense.</p>
+<p>Another SAR application that stood out to me was wetland monitoring, as explored by Adeli et al.&nbsp;[-<span class="citation" data-cites="adeliWetlandMonitoringUsing2020">Adeli et al. (<a href="references.html#ref-adeliWetlandMonitoringUsing2020" role="doc-biblioref">2020</a>)</span>]. Wetlands provide essential ecosystem services but face increasing threats from human activity and climate change. The authors highlight how SAR is well-suited for wetland analysis because it can detect variations in surface roughness and moisture content, capabilities that are challenging for other remote sensing sources. The study conducts a meta-analysis of 172 papers, revealing trends such as the growing use of multi-sensor SAR data and the integration of C- and L-band frequencies, which improve classification accuracy. However, challenges remain, including backscatter similarity between different wetland types, difficulties in selecting the optimal SAR specifications (e.g., incidence angle, frequency, and polarization), and geometric distortions in SAR imagery. The authors emphasize the need for further research to address these issues and maximize SAR’s effectiveness in wetland monitoring and environmental change detection.</p>
 <p>SAR’s unique capabilities make it potentially better suited for certain analyses than the passive sensors we’ve learned about and worked with in previous weeks. These papers demonstrate how SAR can be applied to diverse issues, enabling more effective land management, trade monitoring, and security measures by providing detailed surface insights. SAR’s ability to capture data regardless of weather conditions or time of day makes it an invaluable tool for continuous monitoring and rapid response applications.</p>
 </section>
 <section id="reflection" class="level2" data-number="8.3">
@@ -243,9 +263,20 @@ ul.task-list li input[type="checkbox"] {
 <p>What struck me was the clear policy applications of SAR across a wide range of fields. In defense, SAR-based object detection can enhance surveillance and border security, providing critical intelligence that would be difficult to obtain with passive sensors alone. In trade, SAR can play a key role in monitoring maritime traffic, tracking illegal fishing activities, and overseeing port operations. For environmental change, it offers powerful methods for tracking issues such as deforestation, wetland loss, glacial retreat, and urban expansion. Altogether, SAR presents a great opportunity to create new evidence bases on which decision-making and policy can be built.</p>
 <p>Since this is my last diary entry, I’ve been reflecting more broadly on everything we’ve covered through the term. The range of satellites, methods, and applications we’ve explored has been both impressive and inspiring. Remote sensing offers powerful tools to address a vast array of issues like urban planning, environmental conservation, public health, economic development and conflict, just to name a few. There are so many different ways to use these technologies to manage our cities and natural environments for the better.</p>
 <p>The key challenge, however, is choosing the right data and methods for the research question at hand. And I would argue this task can be just as difficult as conducting the analysis itself. With so many data sources, analytical techniques, and even methods for validating other methods, it’s crucial to think carefully about the problem and select the approach that best fits the specific context. While the vast amount of available data and analytical possibilities is exciting, it can also feel overwhelming. Being precise with the research question and critically assessing the best way to approach it is essential.</p>
-<p>Ultimately, remote sensing is not just a technical exercise, it requires deep reflection. The best way to ensure meaningful results, strong research, and real-world project success is to be deliberate about data selection, methodology, and interpretation.</p>
+<p>Ultimately, remote sensing is not just a technical exercise, but also requires deep reflection. The best way to ensure meaningful results, strong research, and real-world project success is to be deliberate about data selection, methodology, and interpretation.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-adeliWetlandMonitoringUsing2020" class="csl-entry" role="listitem">
+Adeli, Sarina, Bahram Salehi, Masoud Mahdianpari, Lindi J. Quackenbush, Brian Brisco, Haifa Tamiminia, and Stephen Shaw. 2020. <span>“Wetland <span>Monitoring Using SAR Data</span>: <span>A Meta-Analysis</span> and <span>Comprehensive Review</span>.”</span> <em>Remote Sensing</em> 12 (14, 14): 2190. <a href="https://doi.org/10.3390/rs12142190">https://doi.org/10.3390/rs12142190</a>.
+</div>
+<div id="ref-tsokasSARDataApplications2022" class="csl-entry" role="listitem">
+Tsokas, Arsenios, Maciej Rysz, Panos M. Pardalos, and Kathleen Dipple. 2022. <span>“<span>SAR</span> Data Applications in Earth Observation: <span>An</span> Overview.”</span> <em>Expert Systems with Applications</em> 205 (November): 117342. <a href="https://doi.org/10.1016/j.eswa.2022.117342">https://doi.org/10.1016/j.eswa.2022.117342</a>.
+</div>
+<div id="ref-zhangSARShipDetection2021" class="csl-entry" role="listitem">
+Zhang, Tianwen, Xiaoling Zhang, Jianwei Li, Xiaowo Xu, Baoyou Wang, Xu Zhan, Yanqin Xu, et al. 2021. <span>“<span>SAR Ship Detection Dataset</span> (<span>SSDD</span>): <span>Official Release</span> and <span>Comprehensive Data Analysis</span>.”</span> <em>Remote Sensing</em> 13 (18, 18): 3690. <a href="https://doi.org/10.3390/rs13183690">https://doi.org/10.3390/rs13183690</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
