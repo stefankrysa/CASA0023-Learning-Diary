@@ -20,7 +20,7 @@ A recurring theme throughout this week, and this module, has been the importance
 
 ## Application
 
-SAR has a wide range of applications across various fields. I found a categorization by Tsokas et al. [@-tsokasSARDataApplications2022] particularly useful for understanding its diverse uses:
+SAR has a wide range of applications across various fields. I found a categorization by Tsokas et al. [-@tsokasSARDataApplications2022] particularly useful for understanding its diverse uses:
 
 -   Mapping & Land Classification: including land cover classification, forest monitoring, shellfish and oil spill detection, sea ice, and glaciers.
 
