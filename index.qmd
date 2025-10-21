@@ -1,3 +1,11 @@
 # Welcome {.unnumbered}
 
+Welcome to my CASA0023 Learning Diary, created as part of the Remotely Sensing Cities and Environments module at UCL’s Bartlett Centre for Advanced Spatial Analysis.
+
+This site documents my exploration of remote sensing and its applications for better understanding and managing the built and natural environment. It brings together weekly reflections, technical exercises, and policy insights, showing how Earth observation analysis can inform more effective and sustainable planning.
+
+Whether you’re a fellow student, researcher, or simply curious about remote sensing — I hope you find this space both informative and inspiring.
+
+📖 Start exploring below to see what I’ve been learning.
+
 ![Source: European Space Agency.](https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2015/02/colour_vision_for_copernicus/15250391-1-eng-GB/Colour_vision_for_Copernicus_pillars.jpg)
